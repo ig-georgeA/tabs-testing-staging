@@ -1,0 +1,290 @@
+<div class="row-layout group">
+  <igx-tabs [disableAnimation]="true" class="tabs">
+    <igx-tab-item [selected]="true" [disabled]="false" class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+          <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.phone" dataType="string" header="phone" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Grid</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-card type="outlined" *ngFor="let item of northwindCategories" class="card">
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Title goes here...
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              Subtitle goes here...
+            </h5>
+          </igx-card-header>
+          <igx-card-content class="body-content"></igx-card-content>
+          <igx-card-actions class="actions-content">
+            <button igxButton="flat" igxRipple class="button">
+              Button
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                favorite
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Card</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Calendar</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-category-chart [dataSource]="financialBoxOfficeRevenue" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+        <igx-category-chart [dataSource]="financialBoxOfficeRevenue" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Chart</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+  </igx-tabs>
+</div>
+<div class="column-layout group">
+  <igx-tabs [disableAnimation]="true" class="tabs">
+    <igx-tab-item [selected]="true" [disabled]="false" class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+          <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.phone" dataType="string" header="phone" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Grid</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-card type="outlined" *ngFor="let item of northwindCategories" class="card">
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Title goes here...
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              Subtitle goes here...
+            </h5>
+          </igx-card-header>
+          <igx-card-content class="body-content"></igx-card-content>
+          <igx-card-actions class="actions-content">
+            <button igxButton="flat" igxRipple class="button">
+              Button
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                favorite
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Card</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Calendar</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-category-chart [dataSource]="financialBoxOfficeRevenue" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Chart</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+  </igx-tabs>
+  <igx-tabs [disableAnimation]="true" class="tabs">
+    <igx-tab-item [selected]="true" [disabled]="false" class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+          <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.phone" dataType="string" header="phone" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Grid</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-card type="outlined" *ngFor="let item of northwindCategories" class="card">
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Title goes here...
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              Subtitle goes here...
+            </h5>
+          </igx-card-header>
+          <igx-card-content class="body-content"></igx-card-content>
+          <igx-card-actions class="actions-content">
+            <button igxButton="flat" igxRipple class="button">
+              Button
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                favorite
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Card</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+        <igx-calendar class="calendar"></igx-calendar>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Calendar</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-content class="fake_tab_content">
+        <igx-category-chart [dataSource]="financialBoxOfficeRevenue" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+      </igx-tab-content>
+      <igx-tab-header>
+        <span igxTabHeaderLabel>Chart</span>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+      </igx-tab-header>
+    </igx-tab-item>
+  </igx-tabs>
+</div>

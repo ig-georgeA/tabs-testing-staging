@@ -1,0 +1,66 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.tabs {
+  min-width: 0;
+  min-height: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.tab-item {
+  min-width: 100%;
+}
+.fake_tab_content {
+  height: 100%;
+  min-width: 100%;
+}
+.card {
+  width: 320px;
+  height: max-content;
+  min-width: 320px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.grid {
+  min-width: 600px;
+  min-height: 300px;
+}
+.body-content {
+  min-width: 50px;
+  min-height: 50px;
+}
+.actions-content {
+  min-width: 50px;
+  min-height: 40px;
+}
+.button {
+  height: max-content;
+  min-width: min-content;
+}
+.calendar {
+  width: max-content;
+  height: max-content;
+}
+.category-chart {
+  min-width: 400px;
+  min-height: 300px;
+}
